@@ -28,16 +28,27 @@ header {
 }
 .nav-links ul li > a {
   color: #ffff;
+  transition: all 0.5s ease-in-out;
 }
+.nav-links ul li > a:hover {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 section {
   background: rgb(252, 252, 252);
   height: 100vh;
+}
+.the-sections {
+  padding: 5rem 3rem;
 }
 #Acceuille {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
 .mon-image {
   margin-right: 5rem;
@@ -52,9 +63,6 @@ h2 {
 }
 .Acceuille-texte {
   text-align: center;
-}
-.the-sections {
-  padding: 5rem 3rem;
 }
 .about-texte {
   line-height: 2.5rem;
@@ -124,3 +132,106 @@ h2 {
   font-weight: 500;
   font-size: 1.2rem;
 }
+/************ Projects style***********/
+.projects-image {
+  width: 350px;
+  height: 250px;
+  border-radius: 10px 10px 0 0;
+}
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 359px);
+  justify-content: center;
+  gap: 100px;
+  margin-top: 3rem;
+}
+#Projets {
+  height: auto;
+}
+.card {
+  border-radius: 10px;
+  border: solid 4px #0303fc;
+  transition: all 0.5s ease-in;
+}
+.card:hover {
+  background: #0303fc1e;
+  filter: blur(1.5px);
+}
+.card > a {
+  color: #000;
+}
+.card-text {
+  padding: 1rem;
+}
+.card-text > h3 {
+  padding-bottom: 1rem;
+}
+.form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to bottom right,
+    #0011ffe5,
+    #010333dc,
+    #f7021fd7
+  );
+}
+.form-box {
+  width: 100%;
+  padding: 1.5rem;
+}
+form input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: solid 2px #808080;
+  padding-top: 1rem;
+  background: none;
+}
+form label {
+  font-weight: 500;
+}
+form legend {
+  text-align: center;
+}
+form legend > h3 {
+  font-weight: 400;
+}
+form .form-msg {
+  width: 100%;
+}
+.form-msg textarea {
+  width: 90%;
+  height: 7rem;
+  border: none;
+  outline: none;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+.form-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+.form-btn > button {
+  padding: 1rem 1.5rem;
+  background-color: #ffff;
+  border: none;
+  border-radius: 10px;
+  color: #000;
+  font-weight: 500;
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+}
+.form-btn > button:hover {
+  background: rgb(3, 3, 252, 0.5);
+}
+/******
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 2rem;
+}******/
