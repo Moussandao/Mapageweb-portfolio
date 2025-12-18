@@ -11,6 +11,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   padding: 1rem 3rem;
   width: 100%;
   height: 5rem;
@@ -36,13 +37,30 @@ header {
   text-decoration: underline;
   cursor: pointer;
 }
+#menu-toggle {
+  display: none;
+}
 
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-icon span {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+  transition: 0.3s;
+}
 section {
   background: rgb(252, 252, 252);
   height: 100vh;
 }
 .the-sections {
-  padding: 5rem 3rem;
+  padding: 6rem 3rem;
 }
 #Acceuille {
   display: flex;
@@ -134,13 +152,17 @@ h2 {
 }
 /************ Projects style***********/
 .projects-image {
-  width: 350px;
-  height: 250px;
+  /*** width: 350px;
+   height: 250px;
+  ***/
+  width: 100%;
+  height: auto;
   border-radius: 10px 10px 0 0;
 }
 .projects {
   display: grid;
-  grid-template-columns: repeat(2, 359px);
+  /**** grid-template-columns: repeat(2, 359px);***/
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   gap: 100px;
   margin-top: 3rem;
@@ -178,9 +200,18 @@ h2 {
     #f7021fd7
   );
 }
+.form-tile {
+  margin-top: 1rem;
+}
 .form-box {
   width: 100%;
   padding: 1.5rem;
+}
+fieldset {
+  border-radius: 8px;
+}
+legend > h3 {
+  padding: 0 1rem;
 }
 form input {
   width: 100%;
@@ -223,15 +254,129 @@ form .form-msg {
   border-radius: 10px;
   color: #000;
   font-weight: 500;
-  transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
 .form-btn > button:hover {
-  background: rgb(3, 3, 252, 0.5);
+  background: rgb(68, 34, 136, 0.2);
+  border: solid 1px #fff;
 }
-/******
 footer {
   text-align: center;
   padding: 2rem 0;
   margin-top: 2rem;
-}******/
+}
+
+#form-status {
+  margin-top: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+#form-status.success {
+  color: #1a7f37;
+}
+
+#form-status.error {
+  color: #d1242f;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.8rem;
+    z-index: 10;
+  }
+  .the-sections {
+    padding: 6rem 2rem;
+    height: auto;
+  }
+  .section-acceuille {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-texte {
+    line-height: 1.7rem;
+  }
+  .projects {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .parcoursCompetences-Box {
+    display: flex;
+    flex-direction: column;
+  }
+  /* Affiche l’icône hamburger */
+  .menu-icon {
+    display: flex;
+  }
+  /* Cache le menu par défaut */
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgb(252, 252, 252, 0.7);
+    width: 60%;
+    height: 100vh;
+    transform: translateY(-150%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    opacity: 1;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  .nav-links ul li {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .nav-links ul li > a {
+    color: #0303fc;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .nav-links ul li > a:hover {
+    color: #0303fc;
+    font-size: 1.1rem;
+  }
+
+  /* Quand on clique sur le hamburger */
+  #menu-toggle:checked ~ .nav-links {
+    transform: translateY(0);
+  }
+
+  /* Animation du bouton */
+  #menu-toggle:checked + .menu-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  #menu-toggle:checked + .menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle:checked + .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .the-sections {
+    padding: 5rem 1rem;
+    height: auto;
+  }
+}
