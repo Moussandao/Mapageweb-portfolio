@@ -96,6 +96,11 @@ h2 {
   border-radius: 4px;
   cursor: pointer;
   margin-top: 2.5rem;
+  transition: all 0.5s ease-in;
+}
+.About-btn:hover {
+  background: rgb(3, 3, 252, 0.5);
+  border: solid 2px rgb(3, 3, 252);
 }
 .About-btn > a {
   color: #ffff;
@@ -125,6 +130,9 @@ h2 {
 }
 .parcousCompetences > p {
   margin-top: 4rem;
+}
+.parcours ul li strong > a:hover {
+  text-decoration: underline;
 }
 .Box-item {
   width: 50%;
@@ -237,10 +245,13 @@ form .form-msg {
   width: 90%;
   height: 7rem;
   border: none;
+  border-radius: 10px;
   outline: none;
   margin-left: 1rem;
   margin-top: 1rem;
+  padding: 0.5rem;
 }
+
 .form-btn {
   display: flex;
   justify-content: center;
@@ -254,7 +265,7 @@ form .form-msg {
   border-radius: 10px;
   color: #000;
   font-weight: 500;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in;
   cursor: pointer;
 }
 .form-btn > button:hover {
