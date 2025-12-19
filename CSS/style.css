@@ -120,14 +120,6 @@ h2 {
   width: 100%;
   gap: 50px;
 }
-.parcousCompetences {
-  background-image: linear-gradient(
-    to bottom right,
-    #0011ffe5,
-    #010333dc,
-    #f7021fd7
-  );
-}
 .parcousCompetences > p {
   margin-top: 4rem;
 }
