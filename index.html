@@ -16,6 +16,10 @@
   <body>
     <header>
       <h1>PortFolio</h1>
+      <div class="lang-switch">
+  <button id="lang-fr">FR</button>
+  <button id="lang-en">EN</button>
+</div>
       <input type="checkbox" id="menu-toggle" />
 <label for="menu-toggle" class="menu-icon">
   <span></span>
@@ -24,11 +28,11 @@
 </label>
       <nav class="nav-links">
         <ul>
-          <li><a href="#Acceuille">Acceuille</a></li>
-          <li><a href="#About">About</a></li>
-          <li><a href="#Parcours-competences">Parcours & Competences</a></li>
-          <li><a href="#Projets">Projets</a></li>
-          <li><a href="#Formulaire">Contact</a></li>
+          <li><a href="#Acceuille" data-i18n="nav_home">Acceuille</a></li>
+          <li><a href="#About" data-i18n="nav_about">About</a></li>
+          <li><a href="#Parcours-competences" data-i18n="nav_skills">Parcours & Competences</a></li>
+          <li><a href="#Projets" data-i18n="nav_projects">Projets</a></li>
+          <li><a href="#Formulaire" data-i18n="nav_contact">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -38,17 +42,17 @@
         <img src="img/Component 2.svg" alt="mon image" class="mon-image" loading="lazy"/>
       </div>
       <div class="Acceuille-texte">
-        <h2>Salut! je suis Moussa Ndene Ndao</h2>
-        <p>
+        <h2 data-i18n="home_title">Salut! je suis Moussa Ndene Ndao</h2>
+        <p data-i18n="home_passion">
           Passioné de <span class="passion">developpement informatique</span> .
         </p>
-        <p>« Rigueur, Créativité, Adaptabilité »</p>
+        <p data-i18n="home_values">« Rigueur, Créativité, Adaptabilité »</p>
       </div>
     </section>
     <!-------About section------>
     <section id="About" class="the-sections about">
-      <h2>About</h2>
-      <p class="about-texte">
+      <h2 class="subtitle" data-i18n="about_title">A propos de nous</h2>
+      <p class="about-texte" data-i18n="about_text">
 Je suis un développeur web passionné, animé par la curiosité et le désir de créer des expériences numériques simples, 
 esthétiques et utiles. Mon parcours m’a permis de bâtir une solide base en HTML, CSS et JavaScript, 
 que j’enrichis chaque jour par l’apprentissage du fullstack et des bonnes pratiques modernes.  
@@ -66,23 +70,23 @@ tout en continuant à apprendre et à évoluer avec enthousiasme.
         <audio controls>
           <source src="img/About-audio.mp4" type="audio/mp4" />
         </audio>
-        <p>*Ecoutez la <strong>section about</strong> en version audio.</p>
+        <p data-i18n="about_audio">*Ecoutez la <strong>section about</strong> en version audio.</p>
       </div>
       <button type="button" class="About-btn">
-        <a href="#Formulaire">Contactez-moi</a>
+        <a href="#Formulaire" data-i18n="contactez_moi">Contactez-moi</a>
       </button>
     </section>
     <!----Skills section------>
     <section id="Parcours-competences" class="the-sections parcousCompetences">
-      <h2>Parcours & Compétences</h2>
+      <h2 class="subtitle" data-i18n="skills_title">Parcours & Competences</h2>
       <div class="parcoursCompetences-Box">
         <div class="Box-item parcours">
-          <h3>Parcours</h3>
+          <h3 data-i18n="parcours_title">Parcours</h3>
           <ul>
             <li>
               2017-2020 Lycée Seydina Limamou Laye <br />
               <strong
-                ><a href="img/diplôme bac.pdf" target="_blank"
+                ><a href="img/diplôme bac.pdf" target="_blank" data-i18n="bac"
                   >Baccalaureat Scientifique(S2)</a
                 ></strong
               >
@@ -90,7 +94,7 @@ tout en continuant à apprendre et à évoluer avec enthousiasme.
             <li>
               2021-2023 Universite de Thiés <br />
               <strong
-                ><a href="img/Relevé 1ere année.pdf" target="_blank"
+                ><a href="img/Relevé 1ere année.pdf" target="_blank" data-i18n="lmi"
                   >Mathématiques-Informatique(LMI)"Bac+1"</a
                 ></strong
               >
@@ -98,23 +102,15 @@ tout en continuant à apprendre et à évoluer avec enthousiasme.
             <li>
               2024 Force-N Senegal <br />
               <strong
-                ><a href="img/Certificat-forceN.pdf" target="_blank"
+                ><a href="img/Certificat-forceN.pdf" target="_blank" data-i18n="frontend_cert"
                   >Certification en Dev web Font End</a
-                ></strong
-              >
-            </li>
-             <li>
-              2024 Force-N Senegal <br />
-              <strong
-                ><a href="img/Certificat-forceN.pdf" target="_blank"
-                  >Certification en developpement web Front End</a
                 ></strong
               >
             </li>
             <li>
               2025 GomyCode Senegal <br />
               <strong
-                ><a href="img/Moussa Ndene Ndao-Web Development Essentials_ Certificate of Completion.pdf" target="_blank"
+                ><a href="img/Moussa Ndene Ndao-Web Development Essentials_ Certificate of Completion.pdf" target="_blank" data-i18n="web_fundamentals"
                   >Certification sur les fondamentaux & éssentiels du dev web</a
                 ></strong
               >
@@ -122,7 +118,7 @@ tout en continuant à apprendre et à évoluer avec enthousiasme.
           </ul>
         </div>
         <div class="Box-item">
-          <h3>Compétences</h3>
+          <h3 data-i18n="skills_title_small">Compétences</h3>
           <ul>
             <li>
               <img
@@ -159,7 +155,7 @@ tout en continuant à apprendre et à évoluer avec enthousiasme.
           </ul>
         </div>
       </div>
-      <p>
+      <p data-i18n="nb_note">
         <strong
           >NB: *Vous pouvez cliquer sur les noms des formations dans la partie
           parcours pour voir le <strong>diplome</strong> ou le
@@ -169,8 +165,8 @@ tout en continuant à apprendre et à évoluer avec enthousiasme.
     </section>
     <!--------Section Projets---->
     <section id="Projets" class="the-sections">
-      <h2>Mes projets</h2>
-      <p>En  tant que debutant dans le domaine du developpement web j'ai eu a travailler  
+      <h2 class="subtitle" data-i18n="projects_title">Mes projets</h2>
+      <p data-i18n="projects_intro">En  tant que debutant dans le domaine du developpement web j'ai eu a travailler  
         sur de nombreux projets visant a consolider mes connaissances apprises. Voici les quatres (4) 
         projets choisis parmis tant d'autres:
         <div class="projects">
@@ -179,7 +175,7 @@ tout en continuant à apprendre et à évoluer avec enthousiasme.
               <img src="img/docplanner-image.jpg" alt="docplanner photo" class="projects-image" loading="lazy">
               <div class="card-text">
                 <h3>Docplanner</h3>
-                <p> Docplanner est une entreprise internationale de santé numérique qui facilite la rencontre 
+                <p data-i18n="docplanner_desc"> Docplanner est une entreprise internationale de santé numérique qui facilite la rencontre 
                   entre patients et médecins grâce à une plateforme en ligne simple et efficace.</p>
               </div>
             </a>
@@ -189,7 +185,7 @@ tout en continuant à apprendre et à évoluer avec enthousiasme.
               <img src="img/quiz-image.avif" alt="Quiz photo" class="projects-image" loading="lazy">
               <div class="card-text">
                 <h3>SankisQuizz</h3>
-                <p>Une application de quizz dediee aux ecoliers et apprenants de maniere general pour acroitre 
+                <p data-i18n="quiz_desc">Une application de quizz dediee aux ecoliers et apprenants de maniere general pour acroitre 
                   leurs connaissances tout en jouant.</p>
               </div>
             </a>
@@ -199,7 +195,7 @@ tout en continuant à apprendre et à évoluer avec enthousiasme.
               <img src="img/logo-JD.png" alt="JumDelices logo" class="projects-image" loading="lazy">
               <div class="card-text">
                 <h3>JumDelices</h3>
-                <p>"La patisserie de la banlieu" qui vous propose les meilleurs delices,JumDelices votre patisserie au format numerique. </p>
+                <p data-i18n="jumdelices_desc">"La patisserie de la banlieu" qui vous propose les meilleurs delices,JumDelices votre patisserie au format numerique. </p>
               </div>
             </a>
           </div>
@@ -207,8 +203,8 @@ tout en continuant à apprendre et à évoluer avec enthousiasme.
                <a href="https://github.com/Moussandao/Shopping-Card.git" target="_blank">
               <img src="img/e-commerce.png" alt="E-commerce photo" class="projects-image" loading="lazy">
               <div class="card-text">
-                <h3>Pannier E-commerce</h3>
-                <p>Un prototype de panier E-commerce pour faire ses achats en ligne avec efficacite.</p>
+                <h3  data-i18n="E_commerce_panier">Pannier E-commerce</h3>
+                <p data-i18n="cart_desc">Un prototype de panier E-commerce pour faire ses achats en ligne avec efficacite.</p>
               </div>
             </a>
           </div>
@@ -217,23 +213,23 @@ tout en continuant à apprendre et à évoluer avec enthousiasme.
     </section>
     <!------Formulaire----->
     <section id="Formulaire" class="the-sections form-section">
-      <h2 class="form-tile">Formulaire de Contact</h2>
+      <h2 class="subtitle" data-i18n="contact_title">Formulaire de Contact</h2>
       <form id="contact-form">
       <fieldset>
         <legend><h3>Contactez-moi</h3></legend>
           <div class="form-box">
-          <label for="name">Votre Nom:</label>
+          <label for="name" data-i18n="form_name">Votre Nom:</label>
           <input type="text" id="name" placeholder="Moussa Ndao" name="user_name" required>
         </div>
         <div class="form-box">
-          <label for="email">Votre Email:</label>
+          <label for="email" data-i18n="form_email">Votre Email:</label>
           <input type="email" id="email" placeholder="alvine@gmail.com" name="user_email" required>
         </div>
         <div class="form-msg">
           <textarea name="user_message" id="mesage" placeholder="Ecrivez votre message ici!!!" required></textarea>
         </div>
        <div class="form-btn">
-         <button type="submit" id="submit-btn" >Envoyer</button>
+         <button type="submit" id="submit-btn" data-i18n="form_send">Envoyer</button>
          <!-- Champ anti-spam (invisible) -->
         <input type="text" name="website" id="website" style="display:none">
          <!-- Message de retour -->
@@ -244,7 +240,7 @@ tout en continuant à apprendre et à évoluer avec enthousiasme.
     </section>
     <!--------Footer containign my address -->
     <footer>
-      <p>&copy; 2025 Moussa - Fait en HTML, CSS & JavaScript.</p>
+      <p data-i18n="made_in">&copy; 2025 Moussa - Fait en HTML, CSS & JavaScript.</p>
       <p>
         <a href="tel:0669487422">0669-487-422</a> <br />
         <a href="mailto:anonymous@gmail.com">ndaomoussa07@gmail.com</a>
